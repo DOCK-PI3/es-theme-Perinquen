@@ -1,0 +1,29 @@
+<theme>
+	<formatVersion>4</formatVersion>	
+  
+	<view name="system">
+
+		<carousel name="systemcarousel">
+			<type>vertical</type>
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<origin>0.02 0</origin>
+			<color>ffffff00</color>
+			<logoScale>2.5</logoScale>
+			<logoSize>0.1 0.05</logoSize>
+			<maxLogoCount>7</maxLogoCount>
+			<logoAlignment>right</logoAlignment>
+			<defaultTransition>instant</defaultTransition>
+			<zIndex>55</zIndex>
+		</carousel>
+
+	<!-- Numero de juegos del sistema -->
+		
+		<text name="systemInfo">
+			<pos>0 0.56</pos>
+			<size>0.980 0.050</size>
+		</text>
+		
+	</view>
+	
+</theme>
