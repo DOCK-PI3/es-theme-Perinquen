@@ -1,106 +1,20 @@
 <!--
 Theme:	  Perinquen Beta  |  Basado en MyArcadeSpain v2.
 Autor:	Mabedeep | Estructura de "Moriggy" usada con permiso del creador del theme por "Mabedeep" ,
-theme para recalbox ,creado para la comunidad MyArcadeSpain.
+theme para recalbox ,creado para la comunidad MasOS.
 Fecha: 12/07/2018.
 -->
 
 <theme>
 
 	<formatVersion>4</formatVersion>
-	<include>./config.xml</include>
-
-	<!-- Cambio tipo de letra y color de menus -->
-	
-	<view name="menu">
-
-		<menuText name="menufooter">
-			<fontPath>./assets/SF_Hollywood_Hills.ttf</fontPath>
-			<fontSize>0.025</fontSize>
-		</menuText>
-		<menuText name="menutext">
-			<fontSize>0.025</fontSize>			
-			<fontPath>./assets/conthrax-sb.ttf</fontPath>
-		</menuText>
-		<menuTextSmall name="menutextsmall">
-			<fontPath>./assets/conthrax-sb.ttf</fontPath>
-			<fontSize>0.025</fontSize>
-		</menuTextSmall>
-		<menuText name="menutitle">
-			<fontPath>./assets/OUTLAW .otf</fontPath>
-			<fontSize>0.058</fontSize>
-		</menuText>
-		<menuBackground name="menubg">
-			<path>./assets/borderframe.png</path>
-			<fadePath>./assets/fade.png</fadePath>
-		</menuBackground>
-		
-		<menuIcons name="menuicons">
-			<iconKodi>./assets/menu_icons/Kodi.png</iconKodi>
-			<iconSystem>./assets/menu_icons/System.png</iconSystem>
-			<iconUpdates>./assets/menu_icons/Updates.png</iconUpdates>
-			<iconGames>./assets/menu_icons/Games.png</iconGames>
-			<iconControllers>./assets/menu_icons/Controllers.png</iconControllers>
-			<iconUI>./assets/menu_icons/UI.png</iconUI>
-			<iconSound>./assets/menu_icons/Sound.png</iconSound>
-			<iconNetwork>./assets/menu_icons/Network.png</iconNetwork>
-			<iconScraper>./assets/menu_icons/Scraper.png</iconScraper>
-			<iconAdvanced>./assets/menu_icons/Advanced.png</iconAdvanced>
-			<iconQuit>./assets/menu_icons/Quit.png</iconQuit>
-			<iconRestart>./assets/menu_icons/Restart.png</iconRestart>
-			<iconShutdown>./assets/menu_icons/Shutdown.png</iconShutdown>
-			<iconFastShutdown>./assets/menu_icons/Fastshutdown.png</iconFastShutdown>			
-		</menuIcons>
-		
-		<helpsystem name="help">
-			<textColor>FFFFFF</textColor>
-			<fontPath>./assets/SF_Hollywood_Hills.ttf</fontPath>
-			<fontSize>0.037</fontSize>
-		</helpsystem>
-		
-	</view>
 
 	<!-- Pantalla principal -->
-	
+<feature supported="carousel">
 	<view name="system">
-	
-	<!-- Numero de juegos del sistema -->
-		
-			<text name="systemInfo">
-				<color>FFFFFF</color>
-				<fontPath>./assets/SF_Hollywood_Hills.ttf</fontPath>
-				<fontSize>0.028</fontSize>
-				<alignment>right</alignment>
-				<zIndex>70</zIndex>
-			</text>
-			
-	<!-- Puntero de sistemas -->
-
-		<image name="logo2" extra="true">
+			<image name="background" extra="true">
 			<tile>false</tile>
-			<path>./assets/pointer/$system.png</path>
-			<origin>1 0.5</origin>
-			<pos>1 0.5</pos>
-			<size>0.025 0.08</size>
-			<color>FFFFFFFF</color>
-			<zIndex>70</zIndex>
-		</image>
-			
-	<!-- Musica -->
-	
-		<sound name="directory">
-			<path>./assets/sounds</path>
-		</sound>
-		
-	</view>
-
-	<view name="system, basic, detailed">
-
-		<!-- Fondo del sistema -->
-		
-		<image name="background" extra="true">
-			<tile>false</tile>
-			<path>./assets/arts/FONDO1_SYSTEM_MASTER_zindex2_mabedeep.png</path>
+			<path>./_art/FONDO1_SYSTEM_MASTER_zindex2_mabedeep.png</path>
 			<color>FFFFFFFF</color>
 			<size>1 1</size>
 			<pos>0 0</pos>
@@ -109,7 +23,7 @@ Fecha: 12/07/2018.
 		</image>
 		<image name="backgroundback" extra="true">
 			<tile>false</tile>
-			<path>./assets/arts/FONDO_SYSTEM_well_BACK_zindex0.png</path>
+			<path>./_art/FONDO_SYSTEM_well_BACK_zindex0.png</path>
 			<color>FFFFFFFF</color>
 			<size>1 1</size>
 			<pos>0 0</pos>
@@ -120,7 +34,67 @@ Fecha: 12/07/2018.
 		<!-- Logo del sistema -->
 		
 		<image name="logo">
-			<path>./assets/logos/$system.png</path>
+			<path>./_art/logos/${system.theme}.png</path>
+			<zIndex>65</zIndex>
+		</image>
+	<!-- ESTILO HP -->
+<carousel name="systemcarousel">
+			<type>vertical_wheel</type>
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<origin>0 0</origin>
+			<color>FFFFFF00</color>
+			<logoScale>1.5</logoScale>
+			<logoSize>0.15 0.10</logoSize>
+			<logoRotation>-9.0</logoRotation>
+			<logoRotationOrigin>4 0.5</logoRotationOrigin>
+			<logoAlignment>right</logoAlignment>
+			<maxLogoCount>9</maxLogoCount>
+			<zIndex>55</zIndex>
+		</carousel>
+
+
+	<!-- Numero de juegos del sistema -->
+		
+ 			<text name="systemInfo">
+				<color>FFFFFF</color>
+				<fontPath>./_art/SF_Hollywood_Hills.ttf</fontPath>
+				<fontSize>0.028</fontSize>
+				<alignment>right</alignment>
+				<zIndex>70</zIndex>
+			</text> 
+			
+	<!-- Puntero de sistemas -->
+
+		<image name="logo2" extra="true">
+			<tile>false</tile>
+			<path>./_art/assets/pointer/${system.theme}.png</path>
+			<origin>1 0.5</origin>
+			<pos>1 0.5</pos>
+			<size>0.025 0.08</size>
+			<color>FFFFFFFF</color>
+			<zIndex>70</zIndex>
+		</image>
+		
+	</view>
+</feature>
+
+
+	<view name="video, basic, detailed">
+
+		<!-- Fondo gamelist -->
+		
+		<image name="bg3" extra="true">
+			<tile>false</tile>
+			<path>./_art/ES_Plantilla_menuC_zindex0.png</path>
+			<size>1 1</size>
+			<pos>0 0</pos>
+			<zIndex>76</zIndex>
+		</image>
+		<!-- Logo del sistema -->
+		
+		<image name="logo">
+			<path>./_art/logos/${system.theme}.png</path>
 			<zIndex>65</zIndex>
 		</image>
 		
@@ -129,7 +103,7 @@ Fecha: 12/07/2018.
 		<helpsystem name="help">
 			<pos>0.02 0.95</pos>
 			<textColor>FFFFFF</textColor>
-			<fontPath>./assets/SF_Hollywood_Hills.ttf</fontPath>
+			<fontPath>./_art/SF_Hollywood_Hills.ttf</fontPath>
 			<fontSize>0.037</fontSize>
 		</helpsystem>
 	
@@ -147,15 +121,6 @@ Fecha: 12/07/2018.
 			<zIndex>77</zIndex>
 		</image>
 		
-		<!-- Fondo gamelist -->
-		
-		<image name="bg3" extra="true">
-			<tile>false</tile>
-			<path>./assets/ES_Plantilla_menuC_zindex0.png</path>
-			<size>1 1</size>
-			<pos>0 0</pos>
-			<zIndex>76</zIndex>
-		</image>
 		
 		<!-- Posicion y tamaño imagen juego -->
 		
@@ -170,7 +135,7 @@ Fecha: 12/07/2018.
 		<text name="md_description">
 			<color>FFFFFF</color>
 			<forceUppercase>1</forceUppercase>
-			<fontPath>./assets/SF_Hollywood_Hills.ttf</fontPath>
+			<fontPath>./_art/SF_Hollywood_Hills.ttf</fontPath>
 			<fontSize>0.028</fontSize>
 			<pos>0.030 0.700</pos>
 			<size>0.460 0.13</size>
@@ -182,7 +147,7 @@ Fecha: 12/07/2018.
 		<text name="md_lbl_rating, md_lbl_releasedate, md_lbl_genre, md_lbl_players">
 			<color>fefefe</color>
 			<forceUppercase>1</forceUppercase>
-			<fontPath>./assets/conthrax-sb.ttf</fontPath>
+			<fontPath>./_art/conthrax-sb.ttf</fontPath>
 			<fontSize>0.015</fontSize>		
 			<size>0.12 0.04</size>
 			<zIndex>80</zIndex>
@@ -191,7 +156,7 @@ Fecha: 12/07/2018.
 		<text name="md_rating, md_genre, md_players">
 			<color>fefefe</color>
 			<forceUppercase>1</forceUppercase>
-			<fontPath>./assest/conthrax-sb.ttf</fontPath>
+			<fontPath>./_art/conthrax-sb.ttf</fontPath>
 			<fontSize>0.025</fontSize>
 			<size>0.14 0.04</size>
 			<zIndex>80</zIndex>
@@ -230,7 +195,7 @@ Fecha: 12/07/2018.
 		<datetime name="md_releasedate">
 			<color>fefefe</color>
 			<forceUppercase>1</forceUppercase>
-			<fontPath>./assest/SF_Hollywood_Hills.ttf</fontPath>
+			<fontPath>./_art/SF_Hollywood_Hills.ttf</fontPath>
 			<fontSize>0.025</fontSize>
 			<size>0 0.04</size>
 			<pos>0.405 0.41</pos>
@@ -240,13 +205,13 @@ Fecha: 12/07/2018.
 		<!-- Listado de juegos -->
 		
 		<textlist name="gamelist">
-			<selectorImagePath>./assets/icon.png</selectorImagePath>
+			<selectorImagePath>./_art/icon.png</selectorImagePath>
 			<selectorColor>323b43</selectorColor>
 			<selectedColor>FFFFFF</selectedColor>
 			<primaryColor>323b43</primaryColor>
 			<secondaryColor>eac428</secondaryColor>
 			<selectorHeight>0.047</selectorHeight>
-			<fontPath>./assets/OUTLAW .otf</fontPath>
+			<fontPath>./_art/SF_Hollywood_Hills.ttf</fontPath>
 			<alignment>left</alignment>
 			<forceUppercase>1</forceUppercase>
 			<pos>0.610 0.23</pos>
@@ -254,7 +219,7 @@ Fecha: 12/07/2018.
 			<fontSize>0.04</fontSize>
 			<lineSpacing>1.150</lineSpacing>
 			<horizontalMargin>0.04</horizontalMargin>
-			<scrollSound>./assets/scroll.ogg</scrollSound>
+			<!-- <scrollSound>./_art/assets/scroll.ogg</scrollSound> -->
 			<zIndex>85</zIndex>
 		</textlist>
 		
