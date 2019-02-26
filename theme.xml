@@ -13,7 +13,7 @@
 
 	<!-- Pantalla principal -->
 <feature supported="carousel">
-	<view name="basic, grid, system">
+	<view name="basic, system">
 			<image name="background" extra="true">
 			<tile>false</tile>
 			<path>./_art/FONDO1_SYSTEM_MASTER_zindex2_mabedeep.png</path>
@@ -96,6 +96,27 @@
 
 
 	<view name="video, basic, detailed">
+	
+			<!-- Listado de juegos -->
+		
+		<textlist name="gamelist">
+			<selectorImagePath>./_art/icon.png</selectorImagePath>
+			<selectorColor>323b43</selectorColor>
+			<selectedColor>FFFFFF</selectedColor>
+			<primaryColor>323b43</primaryColor>
+			<secondaryColor>eac428</secondaryColor>
+			<selectorHeight>0.047</selectorHeight>
+			<fontPath>./_art/SF_Hollywood_Hills.ttf</fontPath>
+			<alignment>left</alignment>
+			<forceUppercase>1</forceUppercase>
+			<pos>0.610 0.23</pos>
+			<size>0.365 0.59</size>
+			<fontSize>0.04</fontSize>
+			<lineSpacing>1.150</lineSpacing>
+			<horizontalMargin>0.04</horizontalMargin>
+			<!-- <scrollSound>./_art/assets/scroll.ogg</scrollSound> -->
+			<zIndex>85</zIndex>
+		</textlist>
 
 		<!-- Fondo gamelist -->
 		
@@ -122,16 +143,6 @@
 			<zIndex>78</zIndex>
 		</image>
 		
-<!-- 		<image name="md_default" extra="true">
-			<path>./_art/default.png</path>
-			<maxSize>0.19 0.19</maxSize>
-			<size>0.18 0.15</size>
-			<pos>0.12 0.275</pos>
-			<origin>0.1 0.2</origin>
-			<zIndex>77</zIndex>
-		</image> -->
-		
-		
 		<!-- Texto del sistema -->
 		
 		<helpsystem name="help">
@@ -147,13 +158,6 @@
 	
 		<view name="video">
 		
-<!-- 		<image name="thumbnail" extra="true">
-			<pos>0.5 0.521</pos>
-			<path>./_art/marquee.png</path>
-			<size>0.34 0.15</size>
-			<origin>0.7 0.03</origin>
-			<zIndex>78</zIndex>
-		</image> -->
 			<!-- Posicion y tamaño del video juego -->
 
 			<video name="md_video">
@@ -172,78 +176,57 @@
 	</feature>
 	
 	<!-- mod Grid View -->
-<!-- 		<view name="grid">
-			
+		<view name="grid">
+	
+			<!-- Listado de juegos -->
 		<imagegrid name="gamegrid">
-			<size>0.15 0.15</size>		
+			<pos>0.2 0.3</pos>
+			<size>0.605 0.5</size>
+			<margin>0.03 0.04</margin>
+
 		</imagegrid>
-				
 		
-		<text name="md_lbl_rating, md_lbl_releasedate, md_lbl_genre, md_lbl_players">
-			<color>fefefe</color>
-			<forceUppercase>1</forceUppercase>
-			<fontPath>./_art/conthrax-sb.ttf</fontPath>
-			<fontSize>0.015</fontSize>		
-			<size>0.12 0.04</size>
-			<zIndex>80</zIndex>
+<!-- 		<gridtile name="default">
+			<size>0.12875 0.23</size>
+			<backgroundImage>./assets/selector.png</backgroundImage>
+			<backgroundColor>00000000</backgroundColor>
+		</gridtile> -->
+
+		<gridtile name="selected">
+			<size>0.12875 0.23</size>
+			<backgroundColor>ffffff90</backgroundColor>
+		</gridtile>
+
+		<text name="md_title">
+			<color>ffffff</color>
+			<pos>0.02 0.179</pos>
+			<fontSize>0.05</fontSize>
 		</text>
+		<!-- Fondo gamelist -->
 		
-		<text name="md_rating, md_genre, md_players">
-			<color>fefefe</color>
-			<forceUppercase>1</forceUppercase>
-			<fontPath>./_art/conthrax-sb.ttf</fontPath>
-			<fontSize>0.025</fontSize>
-			<size>0.14 0.04</size>
-			<zIndex>80</zIndex>
-		</text>
+		<image name="bg3" extra="true">
+			<tile>false</tile>
+			<path>./_art/ES_Plantilla_menuC_grid.png</path>
+			<size>1 1</size>
+			<pos>0 0</pos>
+		</image>
+		<!-- Logo del sistema -->
 		
+		<image name="logo">
+			<path>./_art/logos/${system.theme}.png</path>
+			<size>0.3 0.155</size>
+		</image>
 		
-		<text name="md_name">
-			<pos>0.0.54 0.15</pos>
+		<!-- Texto del sistema -->
+		
+		<helpsystem name="help">
+			<pos>0.02 0.95</pos>
 			<textColor>FFFFFF</textColor>
 			<fontPath>./_art/SF_Hollywood_Hills.ttf</fontPath>
-			<fontSize>0.045</fontSize>
-		</text>
-		
-		<text name="md_lbl_rating">
-			<pos>0.0.54 0.38</pos>
-		</text>
-		
-		<text name="md_rating">
-			<pos>0.0.54 0.41</pos>
-		</text>
-		
-		<text name="md_lbl_players">
-			<pos>0.0.54 0.46</pos>
-		</text>
-		
-		<text name="md_players">
-			<pos>0.0.54 0.49</pos>
-		</text>
-		
-		<text name="md_lbl_genre">
-			<pos>0.0.54 0.52</pos>
-		</text>
-		
-		<text name="md_genre">
-			<pos>0.0.54 0.55</pos>
-		</text>
-		
-		<text name="md_lbl_releasedate">
-			<pos>0.0.54 0.58</pos>
-		</text>
-		
-		<datetime name="md_releasedate">
-			<color>fefefe</color>
-			<forceUppercase>1</forceUppercase>
-			<fontPath>./_art/SF_Hollywood_Hills.ttf</fontPath>
-			<fontSize>0.025</fontSize>
-			<size>0 0.04</size>
-			<pos>0.0.54 0.61</pos>
-			<zIndex>80</zIndex>
-		</datetime>
-			
-</view> -->
+			<fontSize>0.037</fontSize>
+		</helpsystem>
+	
+	</view>
 	
 <!-- Gamelist View -->
 
