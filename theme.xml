@@ -186,22 +186,22 @@
 		</imagegrid>
 		
 		<gridtile name="default">
-			<size>0.12875 0.23</size>
+			<size>0.12375 0.23</size>
 			<backgroundImage>./_art/assets/selector.png</backgroundImage>
 			<backgroundColor>00000000</backgroundColor>
 		</gridtile>
 		
 		<gridtile name="selected">
-			<size>0.13875 0.28</size>
+			<size>0.14575 0.3</size>
 			<backgroundColor>ffffff90</backgroundColor>
 		</gridtile>
 
-<!-- 		<text name="md_title">
+		<text name="md_title">
 			<color>ffffff</color>
 			<pos>0.02 0.179</pos>
 			<fontPath>./_art/SF_Hollywood_Hills.ttf</fontPath>
-			<fontSize>0.05</fontSize> -->
-
+			<fontSize>0.05</fontSize>
+		</text>
 		<!-- Fondo gamelist -->
 		
 		<image name="bg3" extra="true">
